@@ -1,0 +1,16 @@
+[Unit]
+Description=SSH MCP Server for Cloud Agents with Cloudflare Tunnel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/ssh-mcp
+ExecStart=%h/ssh-mcp/run_mcp_service.sh
+Restart=always
+RestartSec=5
+KillMode=mixed
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

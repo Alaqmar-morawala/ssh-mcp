@@ -1,0 +1,8 @@
+.env
+logs/
+__pycache__/
+*.pyc
+.venv/
+live-url.txt
+connection_details.txt
+connection_info.json
